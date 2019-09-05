@@ -1,0 +1,69 @@
+jquery() 的三种作用
+jquery（）一个参数获取元素 $("p")
+
+jquery(div，class=“a”) 两个参数设置
+$（div）.attr("id","a")将div 设置为id为a的div
+
+$(function(){})如果是函数就加载文档
+
+
+筛选方法：
+
+eq()
+
+first()
+last()
+hasclass()检查当前元素是否还有某个类。有返回true
+
+$(div).hasclass("p").()
+
+filter()$("p").filter(".a") 给所有命名为class a 的品标签添加样式方法
+
+is（）检测一个集合或对象，只要其中有一个符合返回true
+如果不是集合或表达无效都会返回false；
+
+has（）包含某个特定后代元素，去掉不符合的后代元素
+
+&("li").has("ul").css("color"，”red“)；
+
+<ul>
+  <li>list item 1</li>
+  <li>list item 2
+    <ul>
+      <li>list item 2-a</li>
+      <li>list item 2-b</li>
+    </ul>
+  </li>
+  <li>list item 3</li>
+  <li>list item 4</li>
+</ul>
+
+not()除被选中元素不添加样式或方法的其他同级元素都会添加。
+$("p").not("#a").css("background-color","yellow");
+
+slice（开始位置，结束位置（不设置就是集合本身））
+children（）匹配元素的所有子元素
+
+find() 方法返回被选元素的后代元素，一路向下直到最后一个后代。
+
+next（）被选元素的下一个
+
+nextAll（）被选元素的下一个所有的同级元素。
+
+nextuntil（）返回两个个元素之间的同级元素
+
+$("h2").nextuntil("h5").css();
+prev（）
+
+previewAll（）被选元素的前一个所有元素
+prevumtil（）返回两个个元素之间的同级元素
+siblings（）返回所有的同级元素
+
+
+parent（）被选元素的父级
+
+parents（）查找所有的祖级元素直到根元素。
+
+parentsuntil（）两个元素之间的祖籍元素。
+
+
